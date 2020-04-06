@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build CI=true -t sercera/docker-react -f Dockefile.dev .
+  - docker build -t sercera/docker-react -f Dockefile.dev .
 
 script:
   -  docker run -e CI=true sercera/docker-react npm run test
